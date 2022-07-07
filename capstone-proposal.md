@@ -14,8 +14,9 @@ A game over screen.
 What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 JS
 React
+Redux
+Redux Toolkit
 CSS
-Context.api
 Fetch.api
 React-icons or material ui
 Artsy api (https://developers.artsy.net/)

@@ -32,7 +32,6 @@ const recipesSlice = createSlice({
 // Three actions generated from the slice
 export const { getRecipes, getRecipesSuccess, getRecipesFailure } = recipesSlice.actions
 
-//export const recipesSelector = ((state)=> state.recipes);
 // The reducer
 export default recipesSlice.reducer
 

@@ -1,22 +1,11 @@
-import React, { useEffect } from 'react'	
-import { useDispatch, useSelector } from 'react-redux'		
-import { fetchRecipes, recipesSelector } from './slices/recipes'
+import Posts from "./components/posts";
+
+
 
 function App(){
-  // initialize the redux hook
-  const dispatch = useDispatch()		
-  //const { recipes, loading, hasErrors } = useSelector(recipesSelector)
+    return (
+      <Posts />
+    );
+};
 
-  // dispatch our thunk when component first mounts
-  useEffect(() => {
-    dispatch(fetchRecipes())
-  }, [dispatch])
-
-  return (
-    <section>
-      <h1>Recipes</h1>
-    </section>
-  )
-}
-
-export default App
+export default App;

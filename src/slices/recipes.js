@@ -1,15 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {
-  loading: false,
-  hasErrors: false,
-  recipes: [],
-}  
+// const initialState = {
+//   loading: false,
+//   hasErrors: false,
+//   recipes: [],
+// }  
 
 // A slice for recipes with our 3 reducers
 const recipesSlice = createSlice({
   name: 'recipes',
-  initialState,
+  initialState: {
+    loading: false,
+    hasErrors: false,
+    recipes: [],
+  },
   reducers: {
     getRecipes: state => {
       state.loading = true
@@ -28,7 +32,7 @@ const recipesSlice = createSlice({
 // Three actions generated from the slice
 export const { getRecipes, getRecipesSuccess, getRecipesFailure } = recipesSlice.actions
 
-export const recipesSelector = ((state)=> state.recipes);
+//export const recipesSelector = ((state)=> state.recipes);
 // The reducer
 export default recipesSlice.reducer
 

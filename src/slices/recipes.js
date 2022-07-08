@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const initialState = {
+const initialState = {
   loading: false,
   hasErrors: false,
   recipes: [],
-}
+}  
 
 // A slice for recipes with our 3 reducers
 const recipesSlice = createSlice({
@@ -25,6 +25,25 @@ const recipesSlice = createSlice({
     },
   },
 })
-export const recipesSelector = (state)=> state.recipes;
+// Three actions generated from the slice
+export const { getRecipes, getRecipesSuccess, getRecipesFailure } = recipesSlice.actions
+
+export const recipesSelector = ((state)=> state.recipes);
 // The reducer
 export default recipesSlice.reducer
+
+// Asynchronous thunk action
+export function fetchRecipes() {
+  return async dispatch => {
+    dispatch(getRecipes())
+
+    try {
+      const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=')
+      const data = await response.json()
+
+      dispatch(getRecipesSuccess(data))
+    } catch (error) {
+      dispatch(getRecipesFailure())
+    }
+  }
+}

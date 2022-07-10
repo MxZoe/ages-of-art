@@ -16,10 +16,10 @@ const api =
 
         try {
             const response = await axios.request({
-                baseURL: "https://collectionapi.metmuseum.org/public/collection/v1/objects/45734               ",
-                url,
+                baseURL: "https://collectionapi.metmuseum.org",
+                url: "/public/collection/v1/departments",
                 method,
-                data,
+                
             });
             // General
             dispatch(actions.apiCallSucess(response.data));

@@ -1,10 +1,10 @@
-import Posts from "./components/posts";
+import Homepage from "./components/homepage";
 
 
 
 function App(){
     return (
-      <Posts />
+      <Homepage/>
     );
 };
 

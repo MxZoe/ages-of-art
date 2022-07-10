@@ -30,13 +30,13 @@ const { postsRequested, postsReceived, postsRequestFailed } = slice.actions;
 
 const url = "/posts";
 
-export const loadposts = () => (dispatch) => {
-    return dispatch(
-        apiCallBegan({
-            url,
-            onStart: postsRequested.type,
-            onSuccess: postsReceived.type,
-            onError: postsRequestFailed.type,
-        })
-    );
-};
+// export const loadposts = () => (dispatch) => {
+//     return dispatch(
+//         apiCallBegan({
+//             url,
+//             onStart: postsRequested.type,
+//             onSuccess: postsReceived.type,
+//             onError: postsRequestFailed.type,
+//         })
+//     );
+// };

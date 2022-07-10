@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
-import { loadposts } from "../store/cards";
+import { loadcards } from "../store/cards";
 import { useEffect } from "react";
 
-function Cards(){
-    const dispatch = useDispatch();
-    const cards = useSelector((state) => state.list);
+function Cards(title){
+     const dispatch = useDispatch();
+     const cards = useSelector((state) => state.list);
 
-    useEffect(() => {
-        dispatch(loadposts());
-    }, [dispatch]);
+     useEffect(() => {
+         dispatch(loadcards());
+     }, [dispatch]);
 
     return (
         <div class="cardBase">
-          <h1>{cards}.title </h1>
+          <h1>{title}</h1>
           <div class="frame">
           <img src="url"></img>
           </div>  
@@ -20,4 +20,4 @@ function Cards(){
     );
 };
 
-export default Posts;
+export default Cards;

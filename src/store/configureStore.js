@@ -1,5 +1,5 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import reducer from "./posts";
+import reducer from "./cards";
 import api from "./middleware/api";
 
 export default function store() {

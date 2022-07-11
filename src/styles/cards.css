@@ -1,0 +1,9 @@
+.box {
+  position: absolute;
+  cursor: move;
+  color: black;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  user-select: none;
+}

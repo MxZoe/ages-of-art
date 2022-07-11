@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { loadcards } from "../store/cards";
 import { useEffect } from "react";
+import Draggable from "react-draggable";
+import '../styles/cards.css';
 
 function Cards(){
      const dispatch = useDispatch();
@@ -11,12 +13,12 @@ function Cards(){
      }, [dispatch]);
 
      return (
-      <div>
-          <h1>{cards.title}</h1>
-          <img src={cards.primaryImage}/>
-          <h4>Hints</h4>
-          <button>Artist</button><button>Period</button><button>Region</button>
-      </div>
+      <Draggable>
+        <div class="artwork">
+            <h3>{cards.title}</h3>
+            <img src={cards.primaryImage}/>
+        </div>
+      </Draggable>
 
      )
 };

@@ -14,8 +14,10 @@ function Cards(){
       <div>
           <h1>{cards.title}</h1>
           <img src={cards.primaryImage}/>
-          
+          <h4>Hints</h4>
+          <button>Artist</button><button>Period</button><button>Region</button>
       </div>
+
      )
 };
 

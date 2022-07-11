@@ -1,11 +1,15 @@
 import axios from "axios";
 import * as actions from "../api";
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 
 const api =
     ({ dispatch }) =>
     (next) =>
     async (action) => {
+        const newId = randomNumber(1,480129);
         if (action.type !== actions.apiCallBegan.type) return next(action);
 
         const { url, method, data, onStart, onSuccess, onError } =
@@ -18,7 +22,7 @@ const api =
         try {
             const response = await axios.request({
                 baseURL: "https://collectionapi.metmuseum.org",
-                url: "/public/collection/v1/objects/1",
+                url: `/public/collection/v1/objects/${newId}`,
                 method,
                 
                 

@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer(){
   <div class="footer">
-    <p>About Instructions ETC</p>
+    <p>About Instructions Report an Art</p>
     
   </div>
 }

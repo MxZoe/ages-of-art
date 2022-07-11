@@ -12,12 +12,9 @@ function Cards(){
 
      return (
       <div>
-          <h1>Departments</h1>
-          <ul>
-              {cards.departments.map((card) => (
-                  <li>{card.displayName}</li>
-              ))}
-          </ul>
+          <h1>{cards.title}</h1>
+          <img src={cards.primaryImage}/>
+          
       </div>
      )
 };

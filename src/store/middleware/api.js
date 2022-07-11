@@ -1,6 +1,7 @@
 import axios from "axios";
 import * as actions from "../api";
 
+
 const api =
     ({ dispatch }) =>
     (next) =>
@@ -17,8 +18,9 @@ const api =
         try {
             const response = await axios.request({
                 baseURL: "https://collectionapi.metmuseum.org",
-                url: "/public/collection/v1/departments",
+                url: "/public/collection/v1/objects/1",
                 method,
+                
                 
             });
             // General

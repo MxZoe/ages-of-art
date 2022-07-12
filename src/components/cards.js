@@ -14,7 +14,7 @@ function Cards(){
 
      return (
       <Draggable>
-        <div class="artwork">
+        <div className="artwork">
             <h3>{cards.title}</h3>
             <img src={cards.primaryImage}/>
         </div>

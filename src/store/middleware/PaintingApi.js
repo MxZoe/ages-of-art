@@ -22,8 +22,7 @@ const api =
 
         try {
             const response = await axios.request({
-                baseURL: "https://collectionapi.metmuseum.org",
-                url: `/public/collection/v1/objects/${newId}`,
+                url: `https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&medium=Paintings`,
                 method,
                 
             });
